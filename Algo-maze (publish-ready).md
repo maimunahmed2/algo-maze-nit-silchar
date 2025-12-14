@@ -29,7 +29,7 @@
 
 ### 👀 Sensors
 
-- **Infrared Proximity Sensor Modules ×6–8**  
+- **Infrared Proximity Sensor Modules ×6**  
   _(Front-Left, Front-Right, Left, Right + optional spares)_
 
   - 🔗 https://robocraze.com/products/ir-proximity-sensor-1?_pos=1&_sid=9b067e92e&_ss=r
