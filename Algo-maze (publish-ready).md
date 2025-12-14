@@ -127,3 +127,60 @@
 ₹3,762 ÷ 4 = **₹940.50**
 
 ➡️ **₹940.5 per head**
+
+---
+
+## 💡 Cost-Cutting Guide (For Team Discussion)
+
+Use this chart to understand **where money is going** and **what can be safely cut** if needed.  
+👉 Nothing below affects _basic functionality_ unless mentioned.
+
+| Component                      | Current Choice | Keep / Cut?                                                            | Saving (₹) | Impact if Cut                                       |
+| ------------------------------ | -------------- | ---------------------------------------------------------------------- | ---------- | --------------------------------------------------- |
+| **ESP32 Dev Board**            | ₹339           | ✅ Keep                                                                | 0          | Core controller – cannot cut                        |
+| **N20 Motors + Encoders (×2)** | ₹838           | ⚠️ Optional downgrade (but can cause noticable performance difference) | 200–250    | Lose encoder precision (still works, less accurate) |
+| **TB6612FNG Driver**           | ₹149           | ✅ Keep                                                                | 0          | Best efficiency & compact                           |
+| **IR Sensors (6 units)**       | ₹156           | ⚠️ Reduce to 4                                                         | ~50        | Slightly less wall-detection accuracy               |
+| **MPU-6050 IMU**               | ₹165           | ⚠️ Optional                                                            | 165        | Can run without gyro initially                      |
+| **Li-Po Battery**              | ₹111           | ✅ Keep                                                                | 0          | Power reliability                                   |
+| **Buck Converter (MP1584)**    | ₹45            | ✅ Keep                                                                | 0          | Needed for stable voltage                           |
+| **Buck-Boost Module**          | ₹40            | ⚠️ Optional                                                            | 40         | Can be skipped if voltage stays stable              |
+| **Wheels (N20)**               | ₹70            | ✅ Keep                                                                | 0          | Mechanical reliability                              |
+| **3D-Printed Chassis**         | ₹850           | ⚠️ Optimize                                                            | 200–300    | Simpler design / local print                        |
+| **IR Sensor Holders**          | 3D print       | ⚠️ DIY                                                                 | 50–100     | Zip-ties / acrylic                                  |
+| **Miscellaneous**              | ₹300           | ⚠️ Optimize                                                            | 100        | Careful sourcing                                    |
+
+---
+
+## 🧮 Safe Cost-Cut Combos
+
+### 🟢 **Mild Cut (₹150–200)**
+
+- Reduce IR sensors to **4**
+- DIY sensor holders  
+  **→ No major performance loss**
+
+### 🟡 **Balanced Cut (₹250–350)**
+
+- Skip **MPU-6050**
+- Simplify 3D-printed chassis  
+  **→ Works fine for beginner/intermediate run**
+
+### 🔴 **Aggressive Cut (₹400+)**
+
+- Use **non-encoder motors** (unsafe)
+- Minimal sensors (3–4 IR)  
+  **→ Less accuracy, more tuning effort**
+
+---
+
+## ✅ Recommendation
+
+> Keep **6 IR sensors + MPU-6050** if budget allows.  
+> It **greatly improves stability, learning value, and competition performance**.
+
+Let the team vote based on:
+
+- 💰 Budget comfort
+- 🧠 Coding confidence
+- 🏁 Competition seriousness
