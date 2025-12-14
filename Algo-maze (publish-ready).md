@@ -90,3 +90,40 @@
 ###
 
 ---
+
+# 💰 Cost Breakdown
+
+## 🧾 Detailed Cost Table
+
+| Component                                       | Qty | Unit Price (₹) | Subtotal (₹) | Notes                                              |
+| ----------------------------------------------- | --- | -------------- | ------------ | -------------------------------------------------- |
+| **ESP32 Development Board**                     | 1   | 339            | 339          | Robocraze / generic ESP32                          |
+| **N20 Metal Gear Motor (6V, 125 RPM, Encoder)** | 2   | 419            | 838          | Robu.in                                            |
+| **TB6612FNG Motor Driver (Ultra-Small)**        | 1   | 149            | 149          | Robu.in                                            |
+| **IR Proximity Sensor Module**                  | 6   | 26             | 156          | Robocraze                                          |
+| **MPU-6050 IMU (Optional)**                     | 1   | 165            | 165          | Robocraze                                          |
+| **3.7V 500mAh Li-Po Battery**                   | 1   | 111            | 111          | Robocraze                                          |
+| **MP1584EN Mini Buck Converter**                | 1   | 45             | 45           | Selected option                                    |
+| **Buck-Boost Converter Module**                 | 1   | 40             | 40           | LM2596 based                                       |
+| **43mm Rubber Wheels (N20)**                    | 2   | 35             | 70           | Robocraze                                          |
+| **3D-Printed Chassis**                          | 1   | 850            | 850          | _\*Estimated pricing_                              |
+| **IR Sensor Holders (3D-Printed)**              | 1   | ?              | ?            |                                                    |
+| **Miscellaneous**                               | —   | —              | 300          | Wires, switch, screws, PCB - _\*Estimated pricing_ |
+| **Registration**                                | —   | —              | 799          | —                                                  |
+
+> _\*Estimated pricing:_ I am unsure about the prices of these items. If extra is left, I'll refund.
+
+## 🧮 **Total Cost: ₹3,762**
+
+---
+
+## 👥 Per-Head Cost Distribution
+
+- **Total Project Cost:** ₹3,762
+- **Number of Team Members:** 4
+
+### 💸 Cost per Person
+
+₹3,762 ÷ 4 = **₹940.50**
+
+➡️ **₹940.5 per head**
