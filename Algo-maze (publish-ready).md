@@ -1,5 +1,9 @@
 # **Algo-maze**
 
+> © 2025 Maimun Ahmed  
+> All rights reserved.  
+> No part of this code may be copied, modified, or distributed without explicit permission from the author.
+
 ## 🛒 Shopping List (Final · Micromouse Robot)
 
 ### 🔌 Controller
