@@ -112,6 +112,7 @@
 | **Registration**                                | —   | —              | 799          | —                                                  |
 
 > _\*Estimated pricing:_ I am unsure about the prices of these items. If extra is left, I'll refund.
+> \*Shipping and extra charges would be collected later.
 
 ## 🧮 **Total Cost: ₹2,912**
 
