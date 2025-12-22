@@ -34,6 +34,8 @@
 
   - 🔗 https://robocraze.com/products/ir-proximity-sensor-1?_pos=1&_sid=9b067e92e&_ss=r
 
+> Not using [Robu – TCRT5000 IR Tracking Sensor Module](https://robu.in/product/tcrt5000-ir-reflex-tracking-sensor-module/) as its maximum distance measaurement is 25mm only.
+
 - **MPU-6050 Gyro & Accelerometer (Optional but Useful)**
   - 🔗 https://robocraze.com/products/mpu-6050-triple-axis-accelerometer-gyroscope-module?_pos=1&_sid=fe52996d2&_ss=r
 
@@ -41,9 +43,13 @@
 
 ### 🔋 Power System
 
-- **3.7 V 500 mAh Li-Po Battery**
+- **3.7 V 1500 mAh Li-Po Battery**
 
-  - 🔗 https://robocraze.com/products/witty-fox-rechargeable-500mah-3-7v-lithium-polymer-battery?_pos=1&_sid=2f650b970&_ss=r
+  - https://robocraze.com/products/witty-fox-1500mah-rechargeable-3-7v-lipo-battery?_pos=2&_sid=17e085bb6&_ss=r
+
+- ~~**3.7 V 500 mAh Li-Po Battery**~~
+
+  - 🔗 [Product link](https://robocraze.com/products/witty-fox-rechargeable-500mah-3-7v-lithium-polymer-battery?_pos=1&_sid=2f650b970&_ss=r)
 
 - **Mini MP1584 Buck Converter (Step-Down)**
 
@@ -185,3 +191,125 @@ Let the team vote based on:
 - 💰 Budget comfort
 - 🧠 Coding confidence
 - 🏁 Competition seriousness
+
+### Rocket Science
+
+> WARNING: Don't see.
+
+###### 🔥 Must-do reliability steps
+
+- Add 470–1000 µF capacitor near motor driver Vcc
+- Add 100 µF + 0.1 µF near ESP32
+- Use thick wires for battery → motor driver
+- Common GND for everything
+- This prevents ESP32 brownouts when motors accelerate
+
+---
+
+# Stalling
+
+###### What does motor stalling mean?
+
+A **stalled motor** is a motor that is **powered ON but cannot rotate**.
+
+In simple words:
+
+> The motor is _trying_ to spin, but something is **blocking it**.
+
+---
+
+## 🧠 Examples in a micromouse robot
+
+Your N20 motor is **stalled** when:
+
+- 🧱 The robot **hits a wall** and keeps pushing
+- 🛑 The wheel is **stuck** (jammed or too much friction)
+- 🧠 Code commands **full speed**, but the robot **cannot move**
+- 🪨 The robot is pressed hard against the ground
+- 🧪 During testing, you **hold the robot** while motors are ON
+
+---
+
+## ⚡ Why motor stalling is dangerous
+
+When a motor is spinning:
+
+- Current draw is **moderate**
+
+When a motor is **stalled**:
+
+- Current jumps to **maximum (stall current)**
+
+Typical N20 motor values:
+
+- Normal running current: ~200–300 mA
+- **Stall current: 1.5–2 A (per motor)**
+
+With **two motors**:
+
+> ❌ Total current can spike to **3–4 A**
+
+This can cause:
+
+- 🔻 Battery voltage drops
+- 🔄 ESP32 resets (brownouts)
+- 🔥 Motor driver overheating
+- 🔌 Buck converter instability
+
+---
+
+## 🚨 Why this matters for your micromouse
+
+If sensors fail to detect a wall:
+
+- Robot hits the wall
+- Motors keep pushing
+- **Stall condition occurs**
+- Current spikes
+- System may reset or behave unpredictably
+
+---
+
+## 🛡️ How to protect against motor stalling
+
+### 1️⃣ Use a proper motor driver
+
+- ✅ TB6612FNG or DRV8833
+- ❌ Avoid L298N (inefficient and hot)
+
+### 2️⃣ Ensure enough current headroom
+
+- Higher-capacity battery (e.g., 1500 mAh Li-Po)
+- Thick power wires for motors
+
+### 3️⃣ Add capacitors (very important)
+
+- 470–1000 µF across motor supply
+- 100 µF near ESP32 power input
+
+### 4️⃣ Software protection (advanced but recommended)
+
+- Stop motors if:
+  - Encoder speed ≈ 0
+  - Commanded speed is high
+- Use smooth acceleration (no instant full PWM)
+
+### 5️⃣ Mechanical precautions
+
+- Proper wheel alignment
+- Low-friction drivetrain
+- Sensors mounted slightly **ahead of wheels**
+
+---
+
+## 🧠 Key takeaway
+
+> **Motor stalling = powered motor not moving → huge current draw**
+
+Short stalls are okay.  
+**Prolonged stalling damages reliability.**
+
+# Capacitors
+
+- 470–1000 µF across motor supply
+- 100 µF near ESP32
